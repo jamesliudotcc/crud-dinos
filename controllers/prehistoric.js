@@ -7,15 +7,15 @@ var prehistoricData = JSON.parse(
 );
 
 router.get('/', (req, res) => {
-  res.render('prehistoric', { myCreatures: prehistoricData });
+  res.render('prehistoric/index', { myCreatures: prehistoricData });
 });
 
 router.get('/new', (req, res) => {
-  res.render('prehistoric_new');
+  res.render('prehistoric/new');
 });
 router.get('/:idx', (req, res) => {
   if (prehistoricData[req.params.idx - 1]) {
-    res.render('prehistoric_show', {
+    res.render('prehistoric/show', {
       creature: prehistoricData[req.params.idx - 1],
     });
   } else {
