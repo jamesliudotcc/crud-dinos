@@ -24,13 +24,14 @@ router.get('/:idx', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  console.log('I am here');
   prehistoricData.push(req.body);
   console.log(JSON.stringify(prehistoricData));
   fs.writeFileSync(
     './prehistoric_creatures.json',
     JSON.stringify(prehistoricData)
   );
-  res.redirect('./prehistoric_creatures');
+  res.redirect('./prehistoric');
 });
 
 module.exports = router;
