@@ -10,14 +10,14 @@ router.get('/', (req, res) => {
     filteredData = dinoData.filter(dino => {
       return dino.name.toLowerCase() === nameFilter.toLowerCase();
     });
-    res.render('index', { myDinos: filteredData });
+    res.render('dinosaurs/index', { myDinos: filteredData });
   } else {
-    res.render('index', { myDinos: dinoData });
+    res.render('dinosaurs/index', { myDinos: dinoData });
   }
 });
 
 router.get('/new', (req, res) => {
-  res.render('new');
+  res.render('dinosaurs/new');
 });
 
 router.get('/:idx', (req, res) => {

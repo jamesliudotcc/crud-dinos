@@ -1,0 +1,13 @@
+<h1>Edit a prehistoric creature</h1>
+
+<form method="POST" action="/prehistoric">
+    <input id="creature-id" type="hidden" name="creature-id" value="<%= props.index %>">
+    
+    <label for="prehistoricType">Type</label>
+    <input id="prehistoricType" type="text" name="type" value="<%= props.type %>">
+    
+    <label for="prehistoricName">Image URL</label>
+    <input id="prehistoricName" type="text" name="img_url" value="<%= props.img_url %>">
+    
+    <input type="submit">
+</form>

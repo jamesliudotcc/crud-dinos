@@ -23,6 +23,23 @@ router.get('/:idx', (req, res) => {
   }
 });
 
+router.get('/edit/:idx', (req, res) => {
+  let index = req.params.idx;
+  if (prehistoricData[req.params.idx - 1]) {
+    res.render('prehistoric/edit', {
+      props: {
+        index: index,
+        type: prehistoricData[index].type,
+        img_url: prehistoricData[index].img_url,
+      },
+    });
+  } else {
+    res.send(`We only have ${prehistoricData.length} creatures at this time`);
+  }
+});
+
+// >>>>>>>>>  Post Route <<<<<<<<<
+
 router.post('/', (req, res) => {
   console.log('I am here');
   prehistoricData.push(req.body);
