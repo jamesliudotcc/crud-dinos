@@ -1,0 +1,9 @@
+<ol>
+    <% myCreatures.forEach( (creature) => { %>
+        <li><%= `${creature.type}` %> 
+        <br>
+
+        <img src="<%= creature.img_url %>" width="80%" />
+    <% })   %>
+    </li>
+</ol>
