@@ -12,6 +12,6 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
-    "tsnodemon": "^1.1.2"
+    "tsnodemon": "^1.2.2"
   }
 }
